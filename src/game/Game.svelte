@@ -9,7 +9,18 @@
 	let gridHeight = $state(10)
 </script>
 
-<!-- <aside class="aside bg-base-200">Left</aside> -->
+<aside class="aside bg-base-200">
+	<div class="flex flex-col gap-1 p-4">
+		<div>
+			<span class="font-bold">Dungeon Map</span>
+		</div>
+		<button
+			class="btn btn-neutral btn-sm"
+			onclick={() => {
+				game.grid.build()
+			}}>Create</button>
+	</div>
+</aside>
 <main class="main">
 	<section class="nwp page">
 		<article class="content">

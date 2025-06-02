@@ -1,6 +1,6 @@
 .main-grid {
 	display: grid;
-	grid-template-columns: auto 1fr auto;
+	grid-template-columns: auto 2fr auto;
 	grid-template-rows: 1fr;
 	grid-template-areas: 'aside main sb';
 	width: 100%;
@@ -13,13 +13,20 @@
 	grid-area: aside;
 	overflow: hidden;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
 }
+
 .sb {
 	grid-area: sb;
 	overflow: hidden;
 	position: relative;
+	display: flex;
+	flex-direction: column;
 	overflow-y: auto;
 }
+
 .main {
 	grid-area: main;
 	display: grid;
@@ -60,6 +67,7 @@
 			circle-in-center both;
 		animation-delay: var(--page-animation-delay);
 	}
+
 	> *:not(article) {
 		width: 100%;
 		max-width: var(--page-width);

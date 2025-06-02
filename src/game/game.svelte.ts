@@ -1,6 +1,6 @@
 import generateMap from './generateMap'
 import * as ROT from 'rot-js'
-
+import type { Snippet } from 'svelte'
 interface PlayerT {
 	name: string
 	stats: Stats
@@ -150,6 +150,24 @@ class Player {
 	}
 }
 
+class Dialog {
+	props = $state({})
+	content:string = $state('')
+	#open: boolean = $state(false)
+	show(content = '', props = {}) {
+		this.content = content
+		this.props = props
+		this.#open = true
+	}
+
+	set open(value) {
+		this.#open = value
+	}
+	get open() {
+		return this.#open
+	}
+}
+
 class Game {
 	player: PlayerT = $state()
 	grid: GridT = $state()
@@ -164,7 +182,9 @@ class Game {
 	style: string = $derived(
 		`--grid-cols: ${this.config.width};--grid-rows: ${this.config.height};--grid-size: ${Math.floor(this.config.size / 2)}px;}`
 	)
+	dialog = $state()
 	constructor() {
+		this.dialog = new Dialog()
 		this.player = new Player()
 		this.grid = new Grid()
 		this.inventory = new Inventory()

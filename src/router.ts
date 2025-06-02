@@ -1,10 +1,11 @@
 import { createRouter } from 'sv-router'
 import BaseLayout from './lib/layout/BaseLayout.svelte'
 import GameLayout from './lib/layout/GameLayout.svelte'
+import supabase from './lib/supabase.js'
 export const { p, navigate, isActive, route } = createRouter({
 	'/': {
 		'/': () => import('./routes/Start.svelte'),
-		layout: BaseLayout
+		layout: GameLayout
 	},
 	'/game': {
 		'/': () => import('./game/Game.svelte'),
