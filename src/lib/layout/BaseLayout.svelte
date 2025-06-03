@@ -13,9 +13,6 @@
 	{@render children?.()}
 </main>
 
-
-
 {#snippet iconT(name)}
 	<svg class="nwp-icon"><use xlink:href="#{name}"></use></svg>
 {/snippet}
-

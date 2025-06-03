@@ -1,0 +1,66 @@
+{
+  "links": [
+    {
+      "name": "Start",
+      "href": "/",
+      "icon": "nwp-start",
+      "hidden": false
+    },
+    {
+      "name": "Game",
+      "href": "/game",
+      "icon": "nwp-game",
+      "hidden": false
+    },
+    {
+      "name": "Map",
+      "href": "/map",
+      "icon": "nwp-map-1",
+      "hidden": false
+    },
+    {
+      "name": "Settings",
+      "href": "/settings",
+      "icon": "nwp-options",
+      "hidden": false
+    }
+  ],
+  "actions": [
+    {
+      "name": "Analyze",
+      "href": "/game/stats",
+      "icon": "nwp-bar",
+      "hidden": false
+    },
+    {
+      "name": "Database",
+      "href": "/game/db",
+      "icon": "nwp-db",
+      "hidden": false
+    },
+    {
+      "name": "Storage",
+      "href": "/game/storage",
+      "icon": "nwp-map-1",
+      "hidden": false
+    },
+    {
+      "name": "User",
+      "href": "/game/user",
+      "icon": "nwp-user",
+      "hidden": false
+    },
+    {
+      "name": "Messages",
+      "href": "/game/msg",
+      "icon": "nwp-mail",
+      "hidden": false
+    },
+    {
+      "name": "Info",
+      "href": "/game/info",
+      "icon": "nwp-info",
+      "hidden": false
+    }
+  ]
+}

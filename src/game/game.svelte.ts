@@ -152,7 +152,7 @@ class Player {
 
 class Dialog {
 	props = $state({})
-	content:string = $state('')
+	content: string = $state('')
 	#open: boolean = $state(false)
 	show(content = '', props = {}) {
 		this.content = content
